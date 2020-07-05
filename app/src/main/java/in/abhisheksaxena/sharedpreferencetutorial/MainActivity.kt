@@ -36,14 +36,16 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
             } else {
                 editor.clear()
             }
-                    editor.apply()
+            editor.apply()
         }
 
         val name = preferences.getString("key_name", "")
         val age = preferences.getInt("key_age", -1)
         val number = preferences.getLong("key_number", -1)
-        val isNightThemeEnabled = preferences.getBoolean("key_isNightThemeEnabled",
-            false)
+        val isNightThemeEnabled = preferences.getBoolean(
+            "key_isNightThemeEnabled",
+            false
+        )
 
         Log.d(
             TAG,
